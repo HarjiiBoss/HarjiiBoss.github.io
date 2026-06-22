@@ -284,6 +284,30 @@
       pointer-events: none;
     }
 
+    .thumb-logistics {
+      background: linear-gradient(135deg, #0d0f14 0%, #13161e 100%);
+    }
+    .thumb-logistics::after {
+      content: '';
+      position: absolute;
+      top: -20%; right: -5%;
+      width: 220px; height: 220px;
+      background: radial-gradient(circle, rgba(126,184,201,0.14) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .thumb-quantium {
+      background: linear-gradient(135deg, #0d0f14 0%, #13161e 100%);
+    }
+    .thumb-quantium::after {
+      content: '';
+      position: absolute;
+      top: -20%; right: -5%;
+      width: 220px; height: 220px;
+      background: radial-gradient(circle, rgba(109,191,138,0.14) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
     .thumb-title {
       font-family: 'Playfair Display', serif;
       font-size: 1.3rem;
@@ -539,7 +563,41 @@
 
     <div class="projects-grid reveal" id="projects-grid">
 
-      <!-- Project 01 — Northwind Customer Analysis -->
+      <!-- Project 01 — Logistics Operations Performance Analysis -->
+      <a class="project-card" href="https://github.com/HarjiiBoss/logistics-analysis" target="_blank" data-skills="python visualisation">
+        <div class="project-thumb thumb-logistics">
+          <div class="thumb-title">Logistics<br/><span>Operations</span><br/>Performance Analysis</div>
+          <div class="thumb-stats">
+            <div>
+              <div class="thumb-stat-number">55.7%</div>
+              <div class="thumb-stat-label">On-time rate</div>
+            </div>
+            <div>
+              <div class="thumb-stat-number">$5.7M</div>
+              <div class="thumb-stat-label">Maintenance spend</div>
+            </div>
+            <div>
+              <div class="thumb-stat-number">85K+</div>
+              <div class="thumb-stat-label">Trip records</div>
+            </div>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-badges">
+            <span class="badge badge-python">Python</span>
+            <span class="badge badge-tableau">Tableau</span>
+            <span class="badge badge-complete">Complete</span>
+          </div>
+          <div class="project-title">Logistics Operations Performance Analysis</div>
+          <div class="project-desc">End-to-end Python pipeline across 14 tables and 85,000+ trip records — exploring driver, route and fleet health performance. Surfaced a 55.7% fleet on-time rate against a 95%+ industry benchmark, a -609% margin route requiring urgent investigation, and $5.7M in total maintenance spend, packaged into an interactive Tableau dashboard.</div>
+          <div class="project-footer">
+            <span class="project-link">View Project →</span>
+            <span class="project-number">01</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Project 02 — Northwind Customer Analysis -->
       <a class="project-card" href="https://harjiiboss.github.io/northwind-customer-analysis" target="_blank" data-skills="sql">
         <div class="project-thumb thumb-northwind">
           <div class="thumb-title">Northwind<br/><span>Customer &</span><br/>Product Analysis</div>
@@ -573,7 +631,7 @@
         </div>
       </a>
 
-      <!-- Project 02 — Employee Performance Analysis -->
+      <!-- Project 03 — Employee Performance Analysis -->
       <a class="project-card" href="https://harjiiboss.github.io/Employee-Performance-Sales-Analysis" target="_blank" data-skills="sql">
         <div class="project-thumb thumb-employee">
           <div class="thumb-title">Employee<br/><span>Performance &</span><br/>Sales Analysis</div>
@@ -608,7 +666,7 @@
         </div>
       </a>
 
-    <!-- Project 03 — Customer Retention & Revenue Stability Analysis -->
+    <!-- Project 04 — Customer Retention & Revenue Stability Analysis -->
 <a class="project-card" href="https://harjiiboss.github.io/excel-customer-retention-revenue-analysis" target="_blank" data-skills="excel visualisation">
   <div class="project-thumb" style="background: linear-gradient(135deg, #0d0f14 0%, #13161e 100%); position: relative; overflow: hidden;">
     <div style="position: absolute; top: -20%; right: -5%; width: 220px; height: 220px; background: radial-gradient(circle, rgba(200,169,110,0.14) 0%, transparent 70%); pointer-events: none;"></div>
@@ -637,11 +695,68 @@
     <div class="project-desc">Analyses customer retention dynamics, revenue stability, and geographic concentration risk for a UK e-commerce retailer. Built across a 10-phase Excel workflow covering data cleaning, KPI design, retention calculation, segment risk analysis and executive dashboard.</div>
     <div class="project-footer">
       <span class="project-link">View Project →</span>
-      <span class="project-number">01</span>
+      <span class="project-number">04</span>
     </div>
   </div>
 </a>
-      
+
+      <!-- Project 05 — Quantium Data Analytics Forage Simulation -->
+      <a class="project-card" href="https://github.com/HarjiiBoss/forage-quantium-data-analytics" target="_blank" data-skills="python excel">
+        <div class="project-thumb thumb-quantium">
+          <div class="thumb-title">Quantium<br/><span>Data Analytics</span><br/>Job Simulation</div>
+          <div class="thumb-stats">
+            <div>
+              <div class="thumb-stat-number">Forage</div>
+              <div class="thumb-stat-label">Job simulation</div>
+            </div>
+            <div>
+              <div class="thumb-stat-number">Uplift</div>
+              <div class="thumb-stat-label">Test design</div>
+            </div>
+            <div>
+              <div class="thumb-stat-number">Retail</div>
+              <div class="thumb-stat-label">Category mgmt.</div>
+            </div>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-badges">
+            <span class="badge badge-python">Python</span>
+            <span class="badge badge-excel">Excel</span>
+            <span class="badge badge-complete">Complete</span>
+          </div>
+          <div class="project-title">Quantium Data Analytics — Forage Job Simulation</div>
+          <div class="project-desc">Job simulation for a data science team, covering data preparation and customer analytics on transaction datasets. Identified benchmark stores for trial-layout uplift testing and built a synthesised report for the Category Manager to support commercial decisions.</div>
+          <div class="project-footer">
+            <span class="project-link">View Project →</span>
+            <span class="project-number">05</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ═══ FORAGE SIMULATIONS ═══ -->
+  <section>
+    <div class="section-label">Job Simulations</div>
+    <h2>Forage Virtual Experience Programs</h2>
+    <div class="cert-grid reveal">
+      <div class="cert-card">
+        <div class="cert-issuer">Quantium</div>
+        <div class="cert-name">Data Analytics — Job Simulation</div>
+        <div class="cert-date">Jun 2026</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-issuer">BCG</div>
+        <div class="cert-name">Data for Decision Makers — Job Simulation</div>
+        <div class="cert-date">May 2026</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-issuer">Deloitte Australia</div>
+        <div class="cert-name">Data Analytics — Job Simulation</div>
+        <div class="cert-date">Jun 2026</div>
+      </div>
     </div>
   </section>
 
