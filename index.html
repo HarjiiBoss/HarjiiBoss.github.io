@@ -424,6 +424,72 @@
     .cert-name { font-size: 0.95rem; color: var(--text); font-weight: 500; line-height: 1.3; }
     .cert-date { font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--muted); }
 
+    /* ── PROGRAMME HIGHLIGHT CARD ── */
+    .programme-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent2);
+      padding: 2rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+      flex-wrap: wrap;
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.2s;
+    }
+
+    .programme-card:hover { background: var(--surface2); }
+
+    .programme-icon {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--accent2);
+      line-height: 1;
+    }
+
+    .programme-content { flex: 1; min-width: 240px; }
+
+    .programme-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      margin-bottom: 0.5rem;
+    }
+
+    .programme-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    .programme-desc {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .programme-link {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: gap 0.2s;
+    }
+
+    .programme-link:hover { gap: 0.8rem; }
+
     /* ── FOOTER ── */
     footer {
       border-top: 1px solid var(--border);
@@ -714,6 +780,21 @@
         <div class="cert-date">Jun 2026</div>
       </div>
     </div>
+  </section>
+
+  <!-- ═══ TRAINING PROGRAMME ═══ -->
+  <section>
+    <div class="section-label reveal">Training Programme</div>
+    <h2 class="reveal">TS Academy — Data Analytics</h2>
+    <a class="programme-card reveal" href="https://harjiiboss.github.io/logistics-analysis" target="_blank">
+      <div class="programme-icon">↗</div>
+      <div class="programme-content">
+        <div class="programme-label">3-Month Certification Programme · Certified Jul 2026</div>
+        <div class="programme-title">Data Analytics — TS Academy</div>
+        <div class="programme-desc">Completed a 3-month structured Data Analytics training programme covering the full analytics workflow. The Logistics Operations Performance Analysis served as the capstone project submitted for the programme.</div>
+        <span class="programme-link">View Capstone Project →</span>
+      </div>
+    </a>
   </section>
 
   <!-- ═══ CERTIFICATIONS ═══ -->
