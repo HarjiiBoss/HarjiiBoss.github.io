@@ -375,18 +375,17 @@
     .cert-date { font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--muted); }
     /* ── PROGRAMME HIGHLIGHT CARD ── */
     .programme-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--accent2);
-      padding: 2rem;
-      display: flex;
-      align-items: flex-start;
-      gap: 2rem;
-      flex-wrap: wrap;
-      text-decoration: none;
-      color: inherit;
-      transition: background 0.2s;
-    }
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent2);
+    padding: 2rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+    color: inherit;
+    transition: background 0.2s;
+  }
     .programme-card:hover { background: var(--surface2); }
     .programme-icon {
       font-family: 'Playfair Display', serif;
@@ -472,13 +471,13 @@
   <div class="hero-tag">Data Analyst Portfolio</div>
   <h1>Taofeek<br/><span class="name-highlight">Salami</span></h1>
   <p class="hero-text">
-    Self-taught Data Analyst helping businesses uncover revenue leakage, operational inefficiencies, and customer retention risks through SQL, Python, Excel, and Tableau.
+    Data Analyst turning customer, operational, and financial data into decisions around revenue leakage, retention risk, and operational performance through SQL, Python, Excel, and Tableau.
   </p>
   <p class="hero-text hero-secondary">
-    Across eight end-to-end projects, I've translated raw data into measurable business recommendations — spanning customer churn, credit risk, revenue risk, logistics operations, and retail analytics.
+    Across eight analytical projects, I use SQL, Python, Excel, and Tableau to move from raw data and data-quality problems to business analysis, visualisation, and measurable recommendations.
   </p>
   <p class="hero-text hero-availability">
-    Open to remote roles
+    Open to remote Data Analyst opportunities
   </p>
   <div class="skill-tags">
     <span class="skill-tag">SQL · MySQL</span>
@@ -506,153 +505,34 @@
       <button class="filter-btn" data-filter="visualisation">Visualisation</button>
       <button class="filter-btn" data-filter="python">Python</button>
     </div>
-    <div class="projects-grid reveal" id="projects-grid">
-      <!-- Project 01 — Northwind Customer Analysis -->
-      <a class="project-card" href="https://harjiiboss.github.io/northwind-customer-analysis" target="_blank" data-skills="sql">
-        <div class="project-thumb thumb-northwind">
-          <div class="thumb-title">Northwind<br/><span>Customer &</span><br/>Product Analysis</div>
+    <div class="projects-grid reveal" id="projects-grid">            
+      <!-- Project 01 — Fintech Credit Risk Analysis -->
+      <a class="project-card" href="https://harjiiboss.github.io/fintech-credit-risk-analysis" target="_blank" data-skills="sql python visualisation">
+        <div class="project-thumb thumb-fintech">
+          <div class="thumb-title">Fintech<br/><span>Credit Risk</span><br/>Analysis</div>
           <div class="thumb-stats">
-            <div><div class="thumb-stat-number">17</div><div class="thumb-stat-label">Inactive customers</div></div>
-            <div><div class="thumb-stat-number">$29</div><div class="thumb-stat-label">Avg price</div></div>
-            <div><div class="thumb-stat-number">5</div><div class="thumb-stat-label">Priority markets</div></div>
+            <div><div class="thumb-stat-number">149,999</div><div class="thumb-stat-label">Borrowers</div></div>
+            <div><div class="thumb-stat-number">6.68%</div><div class="thumb-stat-label">Default rate</div></div>
+            <div><div class="thumb-stat-number">55.0%</div><div class="thumb-stat-label">Peak combined risk</div></div>
           </div>
         </div>
         <div class="project-body">
           <div class="project-badges">
             <span class="badge badge-sql">SQL</span>
             <span class="badge badge-mysql">MySQL</span>
+            <span class="badge badge-python">Python</span>
+            <span class="badge badge-tableau">Tableau</span>
             <span class="badge badge-complete">Complete</span>
           </div>
-          <div class="project-title">Customer & Product Performance Analysis</div>
-          <div class="project-desc">Evaluates customer concentration risk, pricing imbalance, and revenue dependency within a wholesale distribution environment. Identified 17 inactive accounts representing untapped revenue and pricing outliers skewing the catalog average.</div>
+          <div class="project-title">Fintech Credit Risk Analysis</div>
+          <div class="project-desc">Bureau-independent credit risk segmentation across 149,999 borrowers — combining SQL, Python behavioral risk scoring, and a custom Exposure Index. Found that borrowers scoring Critical on both behavioral risk and exposure default at 55.0%, and that a placeholder data-quality flag outperformed every engineered feature at 54.65%.</div>
           <div class="project-footer">
             <span class="project-link">View Project →</span>
             <span class="project-number">01</span>
           </div>
         </div>
       </a>
-      <!-- Project 02 — Employee Performance Analysis -->
-      <a class="project-card" href="https://harjiiboss.github.io/Employee-Performance-Sales-Analysis" target="_blank" data-skills="sql">
-        <div class="project-thumb thumb-employee">
-          <div class="thumb-title">Employee<br/><span>Performance &</span><br/>Sales Analysis</div>
-          <div class="thumb-stats">
-            <div><div class="thumb-stat-number">196</div><div class="thumb-stat-label">Total orders</div></div>
-            <div><div class="thumb-stat-number">82%</div><div class="thumb-stat-label">Supplier risk</div></div>
-            <div><div class="thumb-stat-number">6.7×</div><div class="thumb-stat-label">Workload gap</div></div>
-          </div>
-        </div>
-        <div class="project-body">
-          <div class="project-badges">
-            <span class="badge badge-sql">SQL</span>
-            <span class="badge badge-mysql">MySQL</span>
-            <span class="badge badge-join">JOINs</span>
-            <span class="badge badge-complete">Complete</span>
-          </div>
-          <div class="project-title">Employee Performance & Sales Analysis</div>
-          <div class="project-desc">Evaluates operational workload imbalance, employee-driven retention risk, and supplier geographic concentration. Detected a 6.7× workload gap and 82% of co-located supplier pairs concentrated in the US and Europe.</div>
-          <div class="project-footer">
-            <span class="project-link">View Project →</span>
-            <span class="project-number">02</span>
-          </div>
-        </div>
-      </a>
-      <!-- Project 03 — Customer Retention & Revenue Stability Analysis -->
-      <a class="project-card" href="https://harjiiboss.github.io/excel-customer-retention-revenue-analysis" target="_blank" data-skills="excel visualisation">
-        <div class="project-thumb" style="background: linear-gradient(135deg, #0d0f14 0%, #13161e 100%); position: relative; overflow: hidden;">
-          <div style="position: absolute; top: -20%; right: -5%; width: 220px; height: 220px; background: radial-gradient(circle, rgba(200,169,110,0.14) 0%, transparent 70%); pointer-events: none;"></div>
-          <div class="thumb-title">Customer<br/><span>Retention &</span><br/>Revenue Analysis</div>
-          <div class="thumb-stats">
-            <div><div class="thumb-stat-number">£3.86M</div><div class="thumb-stat-label">Total revenue</div></div>
-            <div><div class="thumb-stat-number">21.27%</div><div class="thumb-stat-label">Avg retention</div></div>
-            <div><div class="thumb-stat-number">84.42%</div><div class="thumb-stat-label">UK concentration</div></div>
-          </div>
-        </div>
-        <div class="project-body">
-          <div class="project-badges">
-            <span class="badge badge-excel">Excel</span>
-            <span class="badge badge-complete">Complete</span>
-          </div>
-          <div class="project-title">Customer Retention & Revenue Stability Analysis</div>
-          <div class="project-desc">Analyses customer retention dynamics, revenue stability, and geographic concentration risk for a UK e-commerce retailer. Built across a 10-phase Excel workflow covering data cleaning, KPI design, retention calculation, segment risk analysis and executive dashboard.</div>
-          <div class="project-footer">
-            <span class="project-link">View Project →</span>
-            <span class="project-number">03</span>
-          </div>
-        </div>
-      </a>
-      <!-- Project 04 — Logistics Operations Performance Analysis -->
-      <a class="project-card" href="https://harjiiboss.github.io/logistics-analysis" target="_blank" data-skills="python visualisation">
-        <div class="project-thumb thumb-logistics">
-          <div class="thumb-title">Logistics<br/><span>Operations</span><br/>Performance Analysis</div>
-          <div class="thumb-stats">
-            <div><div class="thumb-stat-number">55.7%</div><div class="thumb-stat-label">On-time rate</div></div>
-            <div><div class="thumb-stat-number">$5.7M</div><div class="thumb-stat-label">Maintenance spend</div></div>
-            <div><div class="thumb-stat-number">85K+</div><div class="thumb-stat-label">Trip records</div></div>
-          </div>
-        </div>
-        <div class="project-body">
-          <div class="project-badges">
-            <span class="badge badge-python">Python</span>
-            <span class="badge badge-tableau">Tableau</span>
-            <span class="badge badge-complete">Complete</span>
-          </div>
-          <div class="project-title">Logistics Operations Performance Analysis</div>
-          <div class="project-desc">End-to-end Python pipeline across 14 tables and 85,000+ trip records — exploring driver, route and fleet health performance. Surfaced a 55.7% fleet on-time rate against a 95%+ industry benchmark, a -609% margin route requiring urgent investigation, and $5.7M in total maintenance spend, packaged into an interactive Tableau dashboard.</div>
-          <div class="project-footer">
-            <span class="project-link">View Project →</span>
-            <span class="project-number">04</span>
-          </div>
-        </div>
-      </a>
-      <!-- Project 05 — Quantium Data Analytics Forage Simulation -->
-      <a class="project-card" href="https://harjiiboss.github.io/forage-quantium-data-analytics" target="_blank" data-skills="python visualisation">
-        <div class="project-thumb thumb-quantium">
-          <div class="thumb-title">Quantium<br/><span>Chip Category &</span><br/>Trial Store Uplift</div>
-          <div class="thumb-stats">
-            <div><div class="thumb-stat-number">$1.80M</div><div class="thumb-stat-label">Chip sales</div></div>
-            <div><div class="thumb-stat-number">71,185</div><div class="thumb-stat-label">Customers</div></div>
-            <div><div class="thumb-stat-number">+33.5%</div><div class="thumb-stat-label">Best trial uplift</div></div>
-          </div>
-        </div>
-        <div class="project-body">
-          <div class="project-badges">
-            <span class="badge badge-python">Python</span>
-            <span class="badge badge-complete">Complete</span>
-          </div>
-          <div class="project-title">Quantium Data Analytics — Forage Job Simulation</div>
-          <div class="project-desc">Cleaned and merged 264,836 transactions with 72,637 loyalty customer records to analyse chip category purchasing behaviour, then built a correlation-based control store matching model to test trial layout uplift. Store 77 delivered the strongest result at +33.5% sales uplift, backing a client-facing recommendation for Quantium's Category Manager.</div>
-          <div class="project-footer">
-            <span class="project-link">View Project →</span>
-            <span class="project-number">05</span>
-          </div>
-        </div>
-      </a>
-      <!-- Project 06 — Superstore Database Sales Exploration II -->
-      <a class="project-card" href="https://harjiiboss.github.io/Superstore_Database" target="_blank" data-skills="sql python">
-        <div class="project-thumb thumb-superstore">
-          <div class="thumb-title">Superstore<br/><span>Sales Database</span><br/>Exploration II</div>
-          <div class="thumb-stats">
-            <div><div class="thumb-stat-number">50.4%</div><div class="thumb-stat-label">Loss-order rate</div></div>
-            <div><div class="thumb-stat-number">$14.9M</div><div class="thumb-stat-label">Total revenue</div></div>
-            <div><div class="thumb-stat-number">10</div><div class="thumb-stat-label">Business questions</div></div>
-          </div>
-        </div>
-        <div class="project-body">
-          <div class="project-badges">
-            <span class="badge badge-sql">SQL</span>
-            <span class="badge badge-mysql">MySQL</span>
-            <span class="badge badge-python">Python</span>
-            <span class="badge badge-complete">Complete</span>
-          </div>
-          <div class="project-title">Superstore Sales Database — Exploration II</div>
-          <div class="project-desc">End-to-end pipeline on a Canadian retail dataset (2009–2012, 8,399 orders). Designed a normalised MySQL schema, built a Python/SQLAlchemy ETL pipeline from Excel, then answered 10 self-generated business questions with Pandas and Matplotlib. Uncovered that 50.4% of all orders lose money and Furniture — despite $5.18M in sales — earns only 2.3% margin.</div>
-          <div class="project-footer">
-            <span class="project-link">View Project →</span>
-            <span class="project-number">06</span>
-          </div>
-        </div>
-      </a>
-      <!-- Project 07 — Telco Customer Churn Analysis -->
+      <!-- Project 02 — Telco Customer Churn Analysis -->
       <a class="project-card" href="https://harjiiboss.github.io/Telco_Customer_Churn_Analysis" target="_blank" data-skills="sql excel visualisation">
         <div class="project-thumb thumb-telco">
           <div class="thumb-title">Telco<br/><span>Customer Churn</span><br/>Analysis</div>
@@ -673,18 +553,18 @@
           <div class="project-desc">End-to-end churn analytics project across a three-pillar framework — Customer, Revenue, Risk — built on 22 SQL queries and a four-dashboard Excel reporting suite. Found that month-to-month, early-tenure fiber optic customers drive 30.50% of revenue at risk, and isolated an 814-customer high-risk segment churning at 69.53%.</div>
           <div class="project-footer">
             <span class="project-link">View Project →</span>
-            <span class="project-number">07</span>
+            <span class="project-number">02</span>
           </div>
         </div>
-      </a>
-      <!-- Project 08 — Fintech Credit Risk Analysis -->
-      <a class="project-card" href="https://harjiiboss.github.io/fintech-credit-risk-analysis" target="_blank" data-skills="sql python visualisation">
-        <div class="project-thumb thumb-fintech">
-          <div class="thumb-title">Fintech<br/><span>Credit Risk</span><br/>Analysis</div>
+        </a>
+        <!-- Project 03 — Superstore Database Sales Exploration II -->
+        <a class="project-card" href="https://harjiiboss.github.io/Superstore_Database" target="_blank" data-skills="sql python">
+        <div class="project-thumb thumb-superstore">
+          <div class="thumb-title">Superstore<br/><span>Sales Database</span><br/>Exploration II</div>
           <div class="thumb-stats">
-            <div><div class="thumb-stat-number">149,999</div><div class="thumb-stat-label">Borrowers</div></div>
-            <div><div class="thumb-stat-number">6.68%</div><div class="thumb-stat-label">Default rate</div></div>
-            <div><div class="thumb-stat-number">55.0%</div><div class="thumb-stat-label">Peak combined risk</div></div>
+            <div><div class="thumb-stat-number">50.4%</div><div class="thumb-stat-label">Loss-order rate</div></div>
+            <div><div class="thumb-stat-number">$14.9M</div><div class="thumb-stat-label">Total revenue</div></div>
+            <div><div class="thumb-stat-number">10</div><div class="thumb-stat-label">Business questions</div></div>
           </div>
         </div>
         <div class="project-body">
@@ -692,11 +572,130 @@
             <span class="badge badge-sql">SQL</span>
             <span class="badge badge-mysql">MySQL</span>
             <span class="badge badge-python">Python</span>
+            <span class="badge badge-complete">Complete</span>
+          </div>
+          <div class="project-title">Superstore Sales Database — Exploration II</div>
+          <div class="project-desc">End-to-end pipeline on a Canadian retail dataset (2009–2012, 8,399 orders). Designed a normalised MySQL schema, built a Python/SQLAlchemy ETL pipeline from Excel, then answered 10 self-generated business questions with Pandas and Matplotlib. Uncovered that 50.4% of orders were loss-making despite $14.9M in total revenue, while Furniture generated $5.18M in sales but only a 2.3% margin.</div>
+          <div class="project-footer">
+            <span class="project-link">View Project →</span>
+            <span class="project-number">03</span>
+          </div>
+        </div>
+        </a>
+        <!-- Project 04 — Quantium Data Analytics Forage Simulation -->
+      <a class="project-card" href="https://harjiiboss.github.io/forage-quantium-data-analytics" target="_blank" data-skills="python visualisation">
+        <div class="project-thumb thumb-quantium">
+          <div class="thumb-title">Quantium<br/><span>Chip Category &</span><br/>Trial Store Uplift</div>
+          <div class="thumb-stats">
+            <div><div class="thumb-stat-number">$1.80M</div><div class="thumb-stat-label">Chip sales</div></div>
+            <div><div class="thumb-stat-number">71,185</div><div class="thumb-stat-label">Customers</div></div>
+            <div><div class="thumb-stat-number">+33.5%</div><div class="thumb-stat-label">Peak measured uplift</div></div>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-badges">
+            <span class="badge badge-python">Python</span>
+            <span class="badge badge-complete">Complete</span>
+          </div>
+          <div class="project-title">Quantium Data Analytics — Forage Job Simulation</div>
+          <div class="project-desc">Cleaned and merged 264,836 transactions with 72,637 loyalty customer records to analyse chip category purchasing behaviour, then built a correlation-based control store matching model to test trial layout uplift. Store 77 delivered the strongest result at +33.5% sales uplift, backing a client-facing recommendation for Quantium's Category Manager.</div>
+          <div class="project-footer">
+            <span class="project-link">View Project →</span>
+            <span class="project-number">04</span>
+          </div>
+        </div>
+        </a>
+        <!-- Project 05 — Logistics Operations Performance Analysis -->
+      <a class="project-card" href="https://harjiiboss.github.io/logistics-analysis" target="_blank" data-skills="python visualisation">
+        <div class="project-thumb thumb-logistics">
+          <div class="thumb-title">Logistics<br/><span>Operations</span><br/>Performance Analysis</div>
+          <div class="thumb-stats">
+            <div><div class="thumb-stat-number">55.7%</div><div class="thumb-stat-label">On-time rate</div></div>
+            <div><div class="thumb-stat-number">$5.7M</div><div class="thumb-stat-label">Maintenance spend</div></div>
+            <div><div class="thumb-stat-number">85K+</div><div class="thumb-stat-label">Trip records</div></div>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-badges">
+            <span class="badge badge-python">Python</span>
             <span class="badge badge-tableau">Tableau</span>
             <span class="badge badge-complete">Complete</span>
           </div>
-          <div class="project-title">Fintech Credit Risk Analysis</div>
-          <div class="project-desc">Bureau-independent credit risk segmentation across 149,999 borrowers — combining SQL, Python behavioral risk scoring, and a custom Exposure Index. Found that borrowers scoring Critical on both behavioral risk and exposure default at 55.0%, and that a placeholder data-quality flag outperformed every engineered feature at 54.65%.</div>
+          <div class="project-title">Logistics Operations Performance Analysis</div>
+          <div class="project-desc">Analyzed 85,000+ trip records across 14 tables to evaluate fleet, route, driver, and maintenance performance. Found a 55.7% on-time rate, $5.7M in maintenance spend, and a severely loss-making route requiring investigation. Delivered the analysis through a Tableau dashboard.</div>
+          <div class="project-footer">
+            <span class="project-link">View Project →</span>
+            <span class="project-number">05</span>
+          </div>
+        </div>
+        </a>
+        <!-- Project 06 — Customer Retention & Revenue Stability Analysis -->
+      <a class="project-card" href="https://harjiiboss.github.io/excel-customer-retention-revenue-analysis" target="_blank" data-skills="excel visualisation">
+        <div class="project-thumb" style="background: linear-gradient(135deg, #0d0f14 0%, #13161e 100%); position: relative; overflow: hidden;">
+          <div style="position: absolute; top: -20%; right: -5%; width: 220px; height: 220px; background: radial-gradient(circle, rgba(200,169,110,0.14) 0%, transparent 70%); pointer-events: none;"></div>
+          <div class="thumb-title">Customer<br/><span>Retention &</span><br/>Revenue Analysis</div>
+          <div class="thumb-stats">
+            <div><div class="thumb-stat-number">£3.86M</div><div class="thumb-stat-label">Total revenue</div></div>
+            <div><div class="thumb-stat-number">21.27%</div><div class="thumb-stat-label">Avg retention</div></div>
+            <div><div class="thumb-stat-number">84.42%</div><div class="thumb-stat-label">UK concentration</div></div>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-badges">
+            <span class="badge badge-excel">Excel</span>
+            <span class="badge badge-complete">Complete</span>
+          </div>
+          <div class="project-title">Customer Retention & Revenue Stability Analysis</div>
+          <div class="project-desc">Analyses customer retention dynamics, revenue stability, and geographic concentration risk for a UK e-commerce retailer. Built across a 10-phase Excel workflow covering data cleaning, KPI design, retention calculation, segment risk analysis and executive dashboard.</div>
+          <div class="project-footer">
+            <span class="project-link">View Project →</span>
+            <span class="project-number">06</span>
+          </div>
+        </div>
+        </a>
+        <!-- Project 07 — Employee Performance Analysis -->
+      <a class="project-card" href="https://harjiiboss.github.io/Employee-Performance-Sales-Analysis" target="_blank" data-skills="sql">
+        <div class="project-thumb thumb-employee">
+          <div class="thumb-title">Employee<br/><span>Performance &</span><br/>Sales Analysis</div>
+          <div class="thumb-stats">
+            <div><div class="thumb-stat-number">196</div><div class="thumb-stat-label">Total orders</div></div>
+            <div><div class="thumb-stat-number">82%</div><div class="thumb-stat-label">Supplier risk</div></div>
+            <div><div class="thumb-stat-number">6.7×</div><div class="thumb-stat-label">Workload gap</div></div>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-badges">
+            <span class="badge badge-sql">SQL</span>
+            <span class="badge badge-mysql">MySQL</span>
+            <span class="badge badge-join">JOINs</span>
+            <span class="badge badge-complete">Complete</span>
+          </div>
+          <div class="project-title">Employee Performance & Sales Analysis</div>
+          <div class="project-desc">Evaluates operational workload imbalance, employee-driven retention risk, and supplier geographic concentration. Detected a 6.7× workload gap and 82% of co-located supplier pairs concentrated in the US and Europe.</div>
+          <div class="project-footer">
+            <span class="project-link">View Project →</span>
+            <span class="project-number">07</span>
+          </div>
+        </div>
+        </a>
+        <!-- Project 08 — Northwind Customer Analysis -->
+      <a class="project-card" href="https://harjiiboss.github.io/northwind-customer-analysis" target="_blank" data-skills="sql">
+        <div class="project-thumb thumb-northwind">
+          <div class="thumb-title">Northwind<br/><span>Customer &</span><br/>Product Analysis</div>
+          <div class="thumb-stats">
+            <div><div class="thumb-stat-number">17</div><div class="thumb-stat-label">Inactive customers</div></div>
+            <div><div class="thumb-stat-number">$29</div><div class="thumb-stat-label">Avg price</div></div>
+            <div><div class="thumb-stat-number">5</div><div class="thumb-stat-label">Priority markets</div></div>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-badges">
+            <span class="badge badge-sql">SQL</span>
+            <span class="badge badge-mysql">MySQL</span>
+            <span class="badge badge-complete">Complete</span>
+          </div>
+          <div class="project-title">Customer & Product Performance Analysis</div>
+          <div class="project-desc">Evaluates customer concentration risk, pricing imbalance, and revenue dependency within a wholesale distribution environment. Identified 17 inactive accounts representing untapped revenue and pricing outliers skewing the catalog average.</div>
           <div class="project-footer">
             <span class="project-link">View Project →</span>
             <span class="project-number">08</span>
@@ -728,20 +727,40 @@
     </div>
   </section>
   <!-- ═══ TRAINING PROGRAMME ═══ -->
-  <section>
-    <div class="section-label reveal">Training Programme</div>
-    <h2 class="reveal">TS Academy — Data Analytics</h2>
-    <a class="programme-card reveal" href="https://harjiiboss.github.io/logistics-analysis" target="_blank">
-      <div class="programme-icon">↗</div>
-      <div class="programme-content">
-        <div class="programme-label">3-Month Certification Programme · Certified Jul 2026</div>
-        <div class="programme-title">Data Analytics — TS Academy</div>
-        <div class="programme-desc">Completed a 3-month structured Data Analytics training programme covering the full analytics workflow. The Logistics Operations Performance Analysis served as the capstone project submitted for the programme.</div>
-        <span class="programme-link">View Capstone Project →</span>
+<section>
+  <div class="section-label reveal">Professional Training</div>
+  <h2 class="reveal">TS Academy — Data Analytics</h2>
+
+  <div class="programme-card reveal">
+    <div class="programme-icon">TS</div>
+
+    <div class="programme-content">
+      <div class="programme-label">
+        Completed 3-Month Programme · Certificate Issued Jul 2026
       </div>
-    </a>
+
+      <div class="programme-title">
+        Data Analytics Certification Programme
+      </div>
+
+      <div class="programme-desc">
+        Completed a structured 3-month Data Analytics training programme
+        covering the full analytics workflow. The Logistics Operations
+        Performance Analysis was developed and submitted as the programme's
+        capstone project, with the programme certificate issued in July 2026.
+      </div>
+
+      <a
+        class="programme-link"
+        href="https://harjiiboss.github.io/logistics-analysis"
+        target="_blank"
+      >
+        View Capstone Project →
+      </a>
+    </div>
+  </div>
   </section>
-  <!-- ═══ CERTIFICATIONS ═══ -->
+    <!-- ═══ CERTIFICATIONS ═══ -->
   <section>
     <div class="section-label">Certifications</div>
     <h2>IBM SkillsBuild — 2026</h2>
@@ -794,26 +813,47 @@
   </div>
 </footer>
 <script>
+  // Scroll reveal animation
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
     });
   }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  document.querySelectorAll('.reveal').forEach(element => {
+    observer.observe(element);
+  });
+
+
+  // Project filtering
   const filterBtns = document.querySelectorAll('.filter-btn');
   const projectCards = document.querySelectorAll('.project-card');
+
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
+
+      // Update active filter button
+      filterBtns.forEach(button => {
+        button.classList.remove('active');
+      });
+
       btn.classList.add('active');
+
+      // Get selected filter
       const filter = btn.dataset.filter;
+
+      // Filter project cards
       projectCards.forEach(card => {
-        const skills = card.dataset.skills || '';
-        if (filter === 'all' || skills.includes(filter)) {
-          card.classList.remove('hidden');
-        } else {
-          card.classList.add('hidden');
-        }
+        const skills = (card.dataset.skills || '').split(/\s+/);
+
+        const matches =
+          filter === 'all' ||
+          skills.includes(filter);
+
+        card.classList.toggle('hidden', !matches);
       });
     });
   });
