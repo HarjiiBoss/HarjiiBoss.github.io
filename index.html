@@ -225,6 +225,8 @@
       color: inherit;
     }
     .project-card.hidden { display: none; }
+    /* Featured grid: two columns on wide screens so four cards sit as a 2 × 2 block */
+    #featured-projects-grid { grid-template-columns: repeat(auto-fill, minmax(min(100%, 480px), 1fr)); }
     .project-card::before {
       content: '';
       position: absolute;
@@ -266,6 +268,9 @@
     /* Fintech credit-risk red glow */
     .thumb-fintech { background: linear-gradient(135deg, #0d0f14 0%, #13161e 100%); }
     .thumb-fintech::after { content:''; position:absolute; top:-20%; right:-5%; width:220px; height:220px; background:radial-gradient(circle, rgba(224,123,106,0.16) 0%, transparent 70%); pointer-events:none; }
+    /* Cookie Cats experiment blue glow */
+    .thumb-cookie { background: linear-gradient(135deg, #0d0f14 0%, #13161e 100%); }
+    .thumb-cookie::after { content:''; position:absolute; top:-20%; right:-5%; width:220px; height:220px; background:radial-gradient(circle, rgba(126,184,201,0.16) 0%, transparent 70%); pointer-events:none; }
     .thumb-title {
       font-family: 'Playfair Display', serif;
       font-size: 1.3rem;
@@ -326,6 +331,7 @@
     .badge-excel   { color: #7bc47f;        border-color: rgba(123,196,127,0.3); background: rgba(123,196,127,0.07); }
     .badge-tableau { color: #e8a87c;        border-color: rgba(232,168,124,0.3); background: rgba(232,168,124,0.07); }
     .badge-python  { color: #7eb8c9;        border-color: rgba(126,184,201,0.3); background: rgba(126,184,201,0.07); }
+    .badge-bigquery { color: var(--accent2); border-color: rgba(126,184,201,0.3); background: rgba(126,184,201,0.07); }
     .badge-complete { color: var(--green);  border-color: rgba(109,191,138,0.3); background: rgba(109,191,138,0.07); }
     .project-title {
       font-family: 'Playfair Display', serif;
@@ -469,6 +475,13 @@
       transition: gap 0.2s;
     }
     .programme-link:hover { gap: 0.8rem; }
+    /* Certificate thumbnail shown beside the programme text */
+    .programme-cert {
+      flex: 0 0 auto;
+      width: clamp(200px, 24vw, 320px);
+      border: 1px solid var(--border);
+    }
+    .programme-cert img { display: block; width: 100%; height: auto; }
     /* ── FOOTER ── */
     footer {
       border-top: 1px solid var(--border);
@@ -695,9 +708,35 @@
     <section>
       <div class="section-label">Portfolio</div>
       <h2>Featured Case Studies</h2>
-      <p class="featured-note reveal">A selection of projects demonstrating how I apply data analytics to solve Credit Risk, Product, and CRM challenges across Fintech, SaaS/Telecom, and E-commerce.</p>
+      <p class="featured-note reveal">A selection of projects demonstrating how I apply data analytics to solve Credit Risk, Product, and CRM challenges across Fintech, Mobile Gaming, SaaS/Telecom, and E-commerce.</p>
     <div class="projects-grid reveal" id="featured-projects-grid">
-      <!-- Featured 01 — Fintech Credit Risk Analysis -->
+      <!-- Featured 01 — Cookie Cats A/B Test -->
+      <a class="project-card" href="https://harjiiboss.github.io/cookie-cats-ab-test" target="_blank">
+        <div class="project-thumb thumb-cookie">
+          <div class="thumb-title">Cookie Cats<br/><span>A/B Test</span><br/>First-Gate Placement</div>
+          <div class="thumb-stats">
+            <div><div class="thumb-stat-number">90,189</div><div class="thumb-stat-label">Players</div></div>
+            <div><div class="thumb-stat-number">−0.8 pp</div><div class="thumb-stat-label">7-day retention</div></div>
+            <div><div class="thumb-stat-number">0.3–1.3</div><div class="thumb-stat-label">pp lower, 95% CI</div></div>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-badges">
+            <span class="badge badge-sql">SQL</span>
+            <span class="badge badge-bigquery">BigQuery</span>
+            <span class="badge badge-python">Python</span>
+            <span class="badge badge-tableau">Tableau</span>
+            <span class="badge badge-complete">Complete</span>
+          </div>
+          <div class="project-title">Cookie Cats A/B Test — First-Gate Placement</div>
+          <div class="project-desc">Decides whether a mobile game's first progression gate should move from level 30 to level 40, using decision rules set before the data was examined. 7-day retention was 0.8 percentage points lower at level 40 (95% interval 0.3 to 1.3 points lower), so the gate stays at level 30. The result held under a bootstrap interval and three sensitivity checks, with the limits of a causal reading stated alongside it.</div>
+          <div class="project-footer">
+            <span class="project-link">View Project →</span>
+            <span class="project-number">01</span>
+          </div>
+        </div>
+      </a>
+      <!-- Featured 02 — Fintech Credit Risk Analysis -->
       <a class="project-card" href="https://harjiiboss.github.io/fintech-credit-risk-analysis" target="_blank">
         <div class="project-thumb thumb-fintech">
           <div class="thumb-title">Fintech<br/><span>Credit Risk</span><br/>Analysis</div>
@@ -719,11 +758,11 @@
           <div class="project-desc">Bureau-independent credit risk segmentation across 149,999 borrowers — combining SQL, Python behavioral risk scoring, and a custom Exposure Index. Found that borrowers scoring Critical on both behavioral risk and exposure default at 55.0%, and that a placeholder data-quality flag outperformed every engineered feature at 54.65%.</div>
           <div class="project-footer">
             <span class="project-link">View Project →</span>
-            <span class="project-number">01</span>
+            <span class="project-number">02</span>
           </div>
         </div>
       </a>
-      <!-- Featured 02 — Telco Customer Churn Analysis -->
+      <!-- Featured 03 — Telco Customer Churn Analysis -->
       <a class="project-card" href="https://harjiiboss.github.io/Telco_Customer_Churn_Analysis" target="_blank">
         <div class="project-thumb thumb-telco">
           <div class="thumb-title">Telco<br/><span>Customer Churn</span><br/>Analysis</div>
@@ -744,11 +783,11 @@
           <div class="project-desc">End-to-end churn analytics project across a three-pillar framework — Customer, Revenue, Risk — built on 22 SQL queries and a four-dashboard Excel reporting suite. Found that month-to-month, early-tenure fiber optic customers drive 30.50% of revenue at risk, and isolated an 814-customer high-risk segment churning at 69.53%.</div>
           <div class="project-footer">
             <span class="project-link">View Project →</span>
-            <span class="project-number">02</span>
+            <span class="project-number">03</span>
           </div>
         </div>
         </a>
-        <!-- Featured 03 — Customer Retention & Revenue Stability Analysis -->
+        <!-- Featured 04 — Customer Retention & Revenue Stability Analysis -->
       <a class="project-card" href="https://harjiiboss.github.io/excel-customer-retention-revenue-analysis" target="_blank">
         <div class="project-thumb" style="background: linear-gradient(135deg, #0d0f14 0%, #13161e 100%); position: relative; overflow: hidden;">
           <div style="position: absolute; top: -20%; right: -5%; width: 220px; height: 220px; background: radial-gradient(circle, rgba(200,169,110,0.14) 0%, transparent 70%); pointer-events: none;"></div>
@@ -768,7 +807,7 @@
           <div class="project-desc">Analyses customer retention dynamics, revenue stability, and geographic concentration risk for a UK e-commerce retailer. Built across a 10-phase Excel workflow covering data cleaning, KPI design, retention calculation, segment risk analysis and executive dashboard.</div>
           <div class="project-footer">
             <span class="project-link">View Project →</span>
-            <span class="project-number">03</span>
+            <span class="project-number">04</span>
           </div>
         </div>
         </a>
@@ -997,6 +1036,41 @@
         <span class="programme-link">View Credential →</span>
       </div>
     </a>
+  </section>
+  <!-- ═══ 3MTT PROGRAMME ═══ -->
+  <section>
+    <div class="section-label reveal">Professional Training</div>
+    <h2 class="reveal">3MTT — Data Analysis &amp; Visualization</h2>
+
+    <div class="programme-card reveal">
+      <div class="programme-icon">3M</div>
+
+      <div class="programme-content">
+        <div class="programme-label">
+          Feb – Aug 2026 · Completed Sep 5, 2026
+        </div>
+
+        <div class="programme-title">
+          3 Million Technical Talent (3MTT) Programme — NITDA
+        </div>
+
+        <div class="programme-desc">
+          Completed the Data Analysis &amp; Visualization track of the Federal
+          Government's 3MTT programme, run by the National Information
+          Technology Development Agency. The Fintech Credit Risk Analysis was
+          developed as the programme's capstone project.
+          Credential ID FE/24/6761781046.
+        </div>
+
+        <a class="programme-link" href="https://app.3mtt.training/verify?id=FE/24/6761781046" target="_blank">Verify Certificate →</a>
+        &nbsp;&nbsp;
+        <a class="programme-link" href="https://harjiiboss.github.io/fintech-credit-risk-analysis" target="_blank">View Capstone Project →</a>
+      </div>
+
+      <a class="programme-cert" href="https://app.3mtt.training/verify?id=FE/24/6761781046" target="_blank">
+        <img src="3MTT_Data_Analysis_Visualization.png" alt="3MTT Data Analysis and Visualization certificate of completion" loading="lazy" />
+      </a>
+    </div>
   </section>
     <!-- ═══ CERTIFICATIONS ═══ -->
   <section>
