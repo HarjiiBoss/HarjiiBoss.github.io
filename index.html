@@ -269,6 +269,9 @@
     /* Cookie Cats experiment blue glow */
     .thumb-cookie { background: linear-gradient(135deg, #0d0f14 0%, #13161e 100%); }
     .thumb-cookie::after { content:''; position:absolute; top:-20%; right:-5%; width:220px; height:220px; background:radial-gradient(circle, rgba(126,184,201,0.16) 0%, transparent 70%); pointer-events:none; }
+
+    .thumb-client { background: linear-gradient(135deg, #0d0f14 0%, #13161e 100%); }
+    .thumb-client::after { content:''; position:absolute; top:-20%; right:-5%; width:220px; height:220px; background:radial-gradient(circle, rgba(123,196,127,0.16) 0%, transparent 70%); pointer-events:none; }
     .thumb-title {
       font-family: 'Playfair Display', serif;
       font-size: 1.3rem;
@@ -786,6 +789,37 @@
         </div>
         </a>
             </div>
+  </section>
+    <!-- ═══ CLIENT WORK ═══ -->
+    <section>
+      <div class="section-label">Experience</div>
+      <h2>Client Work</h2>
+      <p class="featured-note reveal">Paid analysis delivered to a client. Details are anonymised and no data is shared, as agreed with the client.</p>
+    <div class="projects-grid reveal" id="client-work-grid" style="max-width:440px; grid-template-columns:1fr;">
+      <div class="project-card">
+        <div class="project-thumb thumb-client">
+          <div class="thumb-title">Survey Analysis<br/><span>Baseline Study</span><br/>Excel Only</div>
+          <div class="thumb-stats">
+            <div><div class="thumb-stat-number">788</div><div class="thumb-stat-label">Survey records</div></div>
+            <div><div class="thumb-stat-number">3</div><div class="thumb-stat-label">Respondent groups</div></div>
+            <div><div class="thumb-stat-number">66</div><div class="thumb-stat-label">Significance tests</div></div>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-badges">
+            <span class="badge badge-excel">Excel</span>
+            <span class="badge badge-mysql">KoboToolbox</span>
+            <span class="badge badge-complete">Delivered</span>
+          </div>
+          <div class="project-title">Baseline Survey Analysis — Private Client</div>
+          <div class="project-desc">End-to-end analysis of a 788-record, 221-column KoboToolbox export covering three respondent groups, built entirely in Excel at the client's request. Delivered the untouched raw data, a cleaned table for each group, a cleaning log, a data-quality summary with record reconciliation, t-tests, ANOVA and chi-square tests with effect sizes and a Bonferroni threshold, coded open-ended responses, an interactive dashboard and a written report. Every result is a formula traceable to the cleaned data. Also wrote a step-by-step guide so a colleague could reproduce the analysis.</div>
+          <div class="project-footer">
+            <span class="project-link">Client work · October 2026</span>
+            <span class="project-number">01</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
     <!-- ═══ ADDITIONAL PROJECTS ═══ -->
     <section>
